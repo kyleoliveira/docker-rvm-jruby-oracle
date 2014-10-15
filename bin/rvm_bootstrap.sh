@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Provided by the RVM folks as a way to do a multi-user setup.
+# If you want to add users other than root, you'll need to run
+# the script below* for that user.
 
 # Install git
 \curl -sSL https://get-git.rvm.io | sudo bash
@@ -9,7 +12,6 @@
 # Install some Rubies
 source "/usr/local/rvm/scripts/rvm"
 command rvm install jruby
-usermod -G rvm root
-echo "source /etc/profile.d/rvm.sh" >> $HOME/.bashrc
-source /etc/profile.d/rvm.sh
-rvm use jruby --default
+
+# * Set the ruby defaults for root and start using jRuby
+source /root/set_up_rvm_user.sh root
