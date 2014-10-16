@@ -15,3 +15,6 @@ command rvm install jruby
 
 # * Set the ruby defaults for root and start using jRuby
 source /root/set_up_rvm_user.sh root
+
+# Let's be real: you're probably going to need this guy.
+gem install bundler
